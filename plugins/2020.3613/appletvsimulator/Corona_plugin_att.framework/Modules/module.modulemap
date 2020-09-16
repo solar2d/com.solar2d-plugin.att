@@ -1,0 +1,6 @@
+framework module Corona_plugin_att {
+  umbrella header "Corona_plugin_att.h"
+
+  export *
+  module * { export * }
+}

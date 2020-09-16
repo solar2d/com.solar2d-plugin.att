@@ -1,1 +1,5 @@
-plugins/*.tgz
+*xcuser*
+src/ios/BuiltPlugin/
+src/ios/build/
+src/ios/libplugin_att.a
+src/tvos/build/
