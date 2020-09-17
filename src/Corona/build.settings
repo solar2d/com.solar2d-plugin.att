@@ -19,6 +19,11 @@ settings =
 		plist =
 		{
 			UILaunchStoryboardName = "LaunchScreen",
+			NSUserTrackingUsageDescription = "This would allow the app to advertise better.",
 		},
 	},
+	plugins = {
+		['plugin.att'] = { publisherId = 'com.solar2d' },
+	},
+
 }
