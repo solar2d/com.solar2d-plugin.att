@@ -11,10 +11,11 @@
 		A49EC14F1BD76ECE0093F529 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A49EC14E1BD76ECE0093F529 /* AppDelegate.m */; };
 		A49EC1551BD76ECE0093F529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49EC1531BD76ECE0093F529 /* Main.storyboard */; };
 		A49EC1571BD76ECE0093F529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49EC1561BD76ECE0093F529 /* Assets.xcassets */; };
-		F5815AC31EE5D6270027695F /* Corona_plugin_library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49EC1A91BD77C3A0093F529 /* Corona_plugin_library.framework */; };
+		F56FC986251CDF24007E2373 /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC985251CDF24007E2373 /* TVServices.framework */; };
+		F5815AC31EE5D6270027695F /* Corona_plugin_att.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49EC1A91BD77C3A0093F529 /* Corona_plugin_att.framework */; };
 		F5815AC41EE5D6300027695F /* CoronaCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5815AC11EE5D6070027695F /* CoronaCards.framework */; };
 		F5815AC51EE5D6300027695F /* CoronaCards.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F5815AC11EE5D6070027695F /* CoronaCards.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F5E5F2571C6D0A4D0088E97A /* Corona_plugin_library.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A49EC1A91BD77C3A0093F529 /* Corona_plugin_library.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F5E5F2571C6D0A4D0088E97A /* Corona_plugin_att.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A49EC1A91BD77C3A0093F529 /* Corona_plugin_att.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F5815AC51EE5D6300027695F /* CoronaCards.framework in Embed Frameworks */,
-				F5E5F2571C6D0A4D0088E97A /* Corona_plugin_library.framework in Embed Frameworks */,
+				F5E5F2571C6D0A4D0088E97A /* Corona_plugin_att.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +67,8 @@
 		A49EC1581BD76ECE0093F529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A49EC1911BD779870093F529 /* Plugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Plugin.xcodeproj; sourceTree = "<group>"; };
 		A49EC1AE1BD77C890093F529 /* main.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.lua; path = ../Corona/main.lua; sourceTree = "<group>"; };
+		F56FC983251CDF24007E2373 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		F56FC985251CDF24007E2373 /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
 		F5815ABD1EE5CBF50027695F /* CoronaNative.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CoronaNative.xcconfig; sourceTree = "<group>"; };
 		F5815AC11EE5D6070027695F /* CoronaCards.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoronaCards.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +79,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5815AC41EE5D6300027695F /* CoronaCards.framework in Frameworks */,
-				F5815AC31EE5D6270027695F /* Corona_plugin_library.framework in Frameworks */,
+				F56FC986251CDF24007E2373 /* TVServices.framework in Frameworks */,
+				F5815AC31EE5D6270027695F /* Corona_plugin_att.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				A49EC17A1BD779050093F529 /* Corona */,
 				F5815ABB1EE5CBD20027695F /* CoronaNative */,
 				A49EC1481BD76ECE0093F529 /* Products */,
+				F56FC984251CDF24007E2373 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 		A49EC1491BD76ECE0093F529 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F56FC983251CDF24007E2373 /* App.entitlements */,
 				A49EC14D1BD76ECE0093F529 /* AppDelegate.h */,
 				A49EC14E1BD76ECE0093F529 /* AppDelegate.m */,
 				A49EC1531BD76ECE0093F529 /* Main.storyboard */,
@@ -134,9 +140,17 @@
 		A49EC1A51BD77C3A0093F529 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A49EC1A91BD77C3A0093F529 /* Corona_plugin_library.framework */,
+				A49EC1A91BD77C3A0093F529 /* Corona_plugin_att.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F56FC984251CDF24007E2373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F56FC985251CDF24007E2373 /* TVServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F5815ABB1EE5CBD20027695F /* CoronaNative */ = {
@@ -195,6 +209,7 @@
 				TargetAttributes = {
 					A49EC1461BD76ECE0093F529 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = BG2J43EA88;
 					};
 				};
 			};
@@ -224,10 +239,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A49EC1A91BD77C3A0093F529 /* Corona_plugin_library.framework */ = {
+		A49EC1A91BD77C3A0093F529 /* Corona_plugin_att.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Corona_plugin_library.framework;
+			path = Corona_plugin_att.framework;
 			remoteRef = A49EC1A81BD77C3A0093F529 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -432,10 +447,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Assets";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = BG2J43EA88;
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coronalabs.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -445,10 +462,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Assets";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = BG2J43EA88;
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coronalabs.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
