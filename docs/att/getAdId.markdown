@@ -1,4 +1,4 @@
-# att.request()
+# att.getAdId()
 
 > --------------------- ------------------------------------------------------------------------------------------
 > __Type__				[Function][api.type.Function]
@@ -8,14 +8,12 @@
 > --------------------- ------------------------------------------------------------------------------------------
 
 
-Function, with single listener parameter (to `att` event). This will display the Tracking dialog. Listener will be called with event, which `status` field corresponds to [att.status][plugin.att.status].
+Function, will return Advertise Id for device as a [String][api.type.String] (Note: if Ad Id is `00000000-0000-0000-0000-000000000000` means that you don't have permission to track).
 
 
 ## Example
 
 ``````lua
-local function listener(e)
-    eventText.text = "Status is " .. tostring(e.status)
-end
-att.request(listener)
+local att = require( "plugin.att" )
+print("Device Ad Id:"..att.getAdId())
 ``````

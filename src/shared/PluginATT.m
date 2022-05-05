@@ -10,7 +10,7 @@
 #include <CoronaLibrary.h>
 #include <string.h>
 #include <AppTrackingTransparency/AppTrackingTransparency.h>
-
+#import <AdSupport/ASIdentifierManager.h>
 CORONA_EXPORT int luaopen_plugin_att( lua_State *L );
 
 static void pushStatus(lua_State *L, NSUInteger status)
@@ -83,6 +83,13 @@ static int att_request( lua_State *L )
 	return 0;
 }
 
+static int att_getAdId( lua_State *L )
+{
+    NSUUID *adId = [[ASIdentifierManager sharedManager] advertisingIdentifier];
+    lua_pushstring(L, [[adId UUIDString] UTF8String]);
+    return 1;
+}
+
 
 // ----------------------------------------------------------------------------
 CORONA_EXPORT int luaopen_plugin_att( lua_State *L )
@@ -90,6 +97,7 @@ CORONA_EXPORT int luaopen_plugin_att( lua_State *L )
 	const luaL_Reg kVTable[] =
 	{
 		{ "request", att_request },
+        { "getAdId", att_getAdId },
 		{ NULL, NULL }
 	};
 	

@@ -5,7 +5,7 @@ local metadata =
 		format = 'staticLibrary',
 		staticLibs = { 'plugin_att', },
 		frameworks = {},
-		frameworksOptional = { "AppTrackingTransparency", },
+		frameworksOptional = { "AppTrackingTransparency", "AdSupport"},
 		-- usesSwift = true,
 	},
 }

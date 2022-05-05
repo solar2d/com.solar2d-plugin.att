@@ -11,5 +11,6 @@ local eventText = display.newText( "tap to request", display.contentCenterX, dis
 Runtime:addEventListener( "tap", function( )
 	att.request(function( e )
 		eventText.text = json.prettify( e )
+        print(att.getAdId())
 	end)
 end )
